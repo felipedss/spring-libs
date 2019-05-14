@@ -5,17 +5,20 @@
 
     <groupId>com.felipedsr</groupId>
     <artifactId>spring-libs</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
         <java.version>11</java.version>
         <spring-boot.version>2.1.4.RELEASE</spring-boot.version>
         <querydsl-core.version>4.2.1</querydsl-core.version>
+        <commons-beanutils.version>1.9.3</commons-beanutils.version>
+        <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
     </properties>
 
     <modules>
         <module>spring-libs-mongodb-repository</module>
+        <module>spring-libs-validation</module>
     </modules>
 
     <dependencies>
@@ -41,6 +44,18 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <dependency>
+                <groupId>com.felipedsr</groupId>
+                <artifactId>spring-libs-validation</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.felipedsr</groupId>
+                <artifactId>spring-libs-mongodb-repository</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -54,6 +69,19 @@
                     <source>11</source>
                     <target>11</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${maven-source-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -74,6 +102,13 @@
             </plugin>
         </plugins>
     </build>
+
+    <repositories>
+        <repository>
+            <id>nexus</id>
+            <url>http://localhost:8081/content/groups/public/</url>
+        </repository>
+    </repositories>
 
     <distributionManagement>
         <repository>

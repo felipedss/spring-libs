@@ -7,17 +7,20 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-libs-mongodb-repository" />
+        <module name="spring-libs-validation" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="spring-libs" target="11" />
       <module name="spring-libs-mongodb-repository" target="11" />
+      <module name="spring-libs-validation" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="spring-libs" options="" />
       <module name="spring-libs-mongodb-repository" options="" />
+      <module name="spring-libs-validation" options="" />
     </option>
   </component>
 </project>

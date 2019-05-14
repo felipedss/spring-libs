@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/spring-libs.iml" filepath="$PROJECT_DIR$/spring-libs.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-libs-mongodb-repository/spring-libs-mongodb-repository.iml" filepath="$PROJECT_DIR$/spring-libs-mongodb-repository/spring-libs-mongodb-repository.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-libs-validation/spring-libs-validation.iml" filepath="$PROJECT_DIR$/spring-libs-validation/spring-libs-validation.iml" />
     </modules>
   </component>
 </project>
